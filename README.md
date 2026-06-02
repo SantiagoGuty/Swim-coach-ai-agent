@@ -2,7 +2,7 @@
 
 <img width="1075" height="618" alt="image" src="https://github.com/user-attachments/assets/ff0b6162-abb0-46cc-8986-7200862dba58" />
 
-AI-powered swim program assistant built on Microsoft Copilot Studio. A coordinator agent routes coach requests to four specialist agents — Lineup, Communications, Practice, and Recruiting — eliminating administrative overhead so coaches can focus on the pool.
+AI-powered swim program assistant built on Microsoft Copilot Studio. A coordinator agent routes coach requests to four specialist agents (Lineup, Communications, Practice, and Recruiting), eliminating administrative overhead so coaches can focus on the pool.
 
 ---
 
