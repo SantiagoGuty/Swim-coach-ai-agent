@@ -1,0 +1,67 @@
+Document wrapper — always use exactly this
+\documentclass[10pt]{article}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\geometry{margin=0.75in}
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Valparaiso University Swimming}}\\
+{\large \textbf{[Meet Name]}}\\
+{\normalsize [Date] $\cdot$ [Location]}
+\end{center}
+\vspace{0.5cm}
+
+[ALL EVENT BLOCKS GO HERE]
+
+\end{document}
+Relay event block
+\noindent\textbf{Event 1 \quad Women 200 Yard Medley Relay}\\
+\begin{tabular}{|c|c|l|c|c|p{2cm}|}
+\hline
+Event & Lane & Name & Age & School & Seed Time \\
+\hline
+1 & 2 & Valpo-IN & & Valpo-IN & [relay seed time] \\
+  &   & 1) Gutierrez Morales, S (Back)  & & & \\
+  &   & 2) Liebmann, E (Breast)         & & & \\
+  &   & 3) Mai, T (Fly)                 & & & \\
+  &   & 4) Martin, A (Free)             & & & \\
+\hline
+\end{tabular}
+\vspace{0.3cm}
+Individual event block
+\noindent\textbf{Event 5 \quad Women 200 Yard Freestyle}\\
+\begin{tabular}{|c|c|l|c|c|p{2cm}|}
+\hline
+Event & Lane & Name & Age & School & Seed Time \\
+\hline
+5 & 2 & Martin, A J      & 21 & Valpo-IN & 1:49.83 \\
+5 & 3 & Rezabek, E D     & 19 & Valpo-IN & 2:04.92 \\
+5 & 4 & Voelker, M G     & 18 & Valpo-IN & 2:01.10 \\
+5 & 5 & Gorski, C N      & 20 & Valpo-IN & 2:01.11 \\
+\hline
+\end{tabular}
+\vspace{0.3cm}
+Rules
+• ALWAYS start with \documentclass — never skip this line
+• ALWAYS end with \end{document} — never skip this line
+• Never output partial LaTeX — always a complete compilable document
+• 6 columns always: Event | Lane | Name | Age | School | Seed Time
+• Column spec: |c|c|l|c|c|p{2cm}|
+• Name format: Last, First Initial Middle Initial
+• School always: Valpo-IN
+• Seed time: actual time from SharePoint (BestTimePrimary or
+  BestTimeSecondary) — NEVER an underline placeholder
+• Relay events first, then individual events
+• Events numbered sequentially starting at 1
+• Each event gets its own tabular block + \vspace{0.3cm}
+• Each individual event lists ALL swimmers in lanes 2–5
+• Max 3 events per swimmer enforced before generating
+• Each swimmer in a different event — never the same event twice
+
+AGE CALCULATION:
+  Freshman  = 19
+  Sophomore = 20
+  Junior    = 21
+  Senior    = 22
