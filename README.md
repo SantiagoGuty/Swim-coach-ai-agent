@@ -2,7 +2,7 @@
 
 <img width="1075" height="618" alt="image" src="https://github.com/user-attachments/assets/ff0b6162-abb0-46cc-8986-7200862dba58" />
 
-▶ [Watch the full demo on YouTube ](https://www.youtube.com/watch?v=-649R8l5y0o&t=5s)https://www.youtube.com/watch?v=-649R8l5y0o&t=5s
+▶ [Watch the full demo on YouTube](https://www.youtube.com/watch?v=-649R8l5y0o&t=5s)
 
 AI-powered swim program assistant built on Microsoft Copilot Studio. A coordinator agent routes coach requests to four specialist agents (Lineup, Communications, Practice, and Recruiting), eliminating administrative overhead so coaches can focus on the pool.
 
@@ -12,7 +12,7 @@ AI-powered swim program assistant built on Microsoft Copilot Studio. A coordinat
 
 <img width="1137" height="649" alt="image" src="https://github.com/user-attachments/assets/b9e217a0-714f-4694-a0a1-8ee46e8e13b9" />
 
-Collegiate and club swim coaches spend 2–3 hours per meet manually building lineups, writing practice plans from scratch, tracking recruits in spreadsheets, and sending communications one by one. Most programs run on 1–2 coaches doing everything — leaving almost no time for actual coaching.
+Collegiate and club swim coaches spend 2–3 hours per meet manually building lineups, writing practice plans from scratch, tracking recruits in spreadsheets, and sending communications one by one. Most programs run on 1–2 coaches doing everything, leaving almost no time for actual coaching.
 
 - **900+** Collegiate swim programs in the US
 - **2,740+** Registered clubs in the US
@@ -51,6 +51,20 @@ One coordinator agent understands natural language requests and routes them sile
 - **Microsoft Outlook** — email drafting, sending, and reading
 - **Claude Sonnet 4.6** — reasoning model powering the coordinator
 - **LaTeX** — HY-TEK Meet Manager formatted meet sheet output
+
+---
+
+## LaTeX Meet Sheet Generation
+
+The Lineup Agent generates a complete, compilable LaTeX document following industry standard Meet Manager format and delivers it as a downloadable `.txt` file via Power Automate. 
+LaTeX produces pixel-perfect, professional meet sheets while keeping every detail fully editable before the coach compiles to PDF.
+
+### Flow
+
+1. Coach confirms the final lineup
+2. Agent generates full LaTeX — relay blocks first, then individual events
+3. **Lineup Creation Flow** (Power Automate) receives the LaTeX as `lineup_text`, saves it as `Lineup_[timestamp].txt` to `/Documents` on OneDrive, and creates an anonymous share link
+4. Agent returns the link — coach pastes into Overleaf or TeXworks to compile the PDF
 
 ---
 
@@ -125,9 +139,10 @@ swim-coach-ai/
 9. Add all four specialist agents as **Child** agents under the coordinator
 10. Test by typing: `"Build the optimal lineup for Saturday's meet"`
 
+> **Note:** This agent was not published externally due to Microsoft 365 school account restrictions.
+> All functionality was built and validated within the copilot studio environment.
 
-
-## Hackathon Submission
+## Hackathon Submission  🏊🦝
 
 Built for the **Microsoft Agent Academy Live Hackathon 2026** — Recruit Track.
 
